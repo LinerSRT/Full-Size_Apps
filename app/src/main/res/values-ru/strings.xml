@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Full-Size Apps</string>
+    <string name="cancel">Отмена</string>
+    <string name="clear">Очистить</string>
+    <string name="done_title">Готово</string>
+    <string name="ok">Ок</string>
+    <string name="save">Сохранить</string>
+    <string name="saved_message">Сохранено</string>
+    <string name="select_all">Выбрать все</string>
+    <string name="warn_changes_message">Изменений не обнаружено.</string>
+    <string name="warning_title">Внимание!</string>
+</resources>
