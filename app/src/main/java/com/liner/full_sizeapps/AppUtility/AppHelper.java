@@ -22,6 +22,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+@SuppressWarnings("CanBeFinal")
 public class AppHelper {
     private Context context;
     private List<AppHolder> appHolderList;

@@ -19,24 +19,8 @@ public class AppHolder implements Serializable {
         return appName;
     }
 
-    public void setAppName(String appName) {
-        this.appName = appName;
-    }
-
     public String getAppPackageName() {
         return appPackageName;
-    }
-
-    public void setAppPackageName(String appPackageName) {
-        this.appPackageName = appPackageName;
-    }
-
-    public String getAppSourceDir() {
-        return appSourceDir;
-    }
-
-    public void setAppSourceDir(String appSourceDir) {
-        this.appSourceDir = appSourceDir;
     }
 
 

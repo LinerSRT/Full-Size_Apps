@@ -18,6 +18,7 @@ import com.liner.full_sizeapps.R;
 
 import java.util.List;
 
+@SuppressWarnings("CanBeFinal")
 public class AppAdapter extends RecyclerView.Adapter<AppAdapter.ViewHolder> {
     private List<AppHolder> appHolderList;
     private Context context;
