@@ -3,6 +3,7 @@ package com.liner.full_sizeapps.AppUtility;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -43,6 +44,7 @@ public class AppAdapter extends RecyclerView.Adapter<AppAdapter.ViewHolder> {
         final AppHolder item = appHolderList.get(position);
 
         holder.appIcon.setImageDrawable(AppHelper.getApplicationIcon(context, item.getAppPackageName()));
+        holder.itemLayout.setBackgroundColor((item.isSelected())? Color.parseColor("#CCCCCC"):Color.parseColor("#FFFFFF"));
         holder.appName.setTypeface(holder.appName.getTypeface(), (item.isSelected())?Typeface.BOLD: Typeface.NORMAL);
         holder.appName.setText(String.valueOf(item.getAppName()));
         holder.selectedCheckBox.setChecked(item.isSelected());
@@ -53,6 +55,7 @@ public class AppAdapter extends RecyclerView.Adapter<AppAdapter.ViewHolder> {
                 if (selectionListener != null) {
                     item.setSelected(!item.isSelected());
                     holder.selectedCheckBox.setChecked(item.isSelected());
+                    holder.itemLayout.setBackgroundColor((item.isSelected())? Color.parseColor("#CCCCCC"):Color.parseColor("#FFFFFF"));
                     holder.appName.setTypeface(holder.appName.getTypeface(), (item.isSelected())?Typeface.BOLD: Typeface.NORMAL);
                     selectionListener.onItemsSelected(appHolderList);
                     notifyDataSetChanged();

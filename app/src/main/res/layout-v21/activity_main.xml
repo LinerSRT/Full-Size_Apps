@@ -91,6 +91,22 @@
         android:padding="8dp"
         android:orientation="horizontal">
 
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:enabled="true"
+            android:background="@drawable/button_bg"
+            android:padding="8dp"
+            android:text="@string/save"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            tools:ignore="ButtonStyle" />
+
+
         <Button
             android:id="@+id/cancel"
             android:layout_width="0dp"
@@ -100,21 +116,6 @@
             android:padding="8dp"
             android:enabled="true"
             android:text="@string/cancel"
-            android:layout_marginEnd="8dp"
-            android:textAllCaps="false"
-            android:textColor="#fff"
-            tools:ignore="ButtonStyle" />
-
-        <Button
-            android:id="@+id/save"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginStart="8dp"
-            android:enabled="true"
-            android:background="@drawable/button_bg"
-            android:padding="8dp"
-            android:text="@string/save"
             android:textAllCaps="false"
             android:textColor="#fff"
             tools:ignore="ButtonStyle" />
