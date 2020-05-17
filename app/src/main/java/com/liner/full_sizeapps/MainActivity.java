@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (holderList != null) {
-                    Intent broadcast = new Intent(getPackageName() + ".FULL_SIZE");
+                    Intent broadcast = new Intent("com.szchoiceway.ACTION_APPS_SELECTED");
                     Bundle bundle = new Bundle();
                     bundle.putSerializable("selectedList", generateBroadcastList(true, holderList));
                     bundle.putSerializable("unselectedList", generateBroadcastList(false, holderList));
@@ -89,14 +89,14 @@ public class MainActivity extends AppCompatActivity {
         appRecycler.setAdapter(appAdapter);
     }
 
-    private ArrayList<String> generateBroadcastList(boolean selected, List<AppHolder> items) {
-        ArrayList<String> packages = new ArrayList<>();
+    private String generateBroadcastList(boolean selected, List<AppHolder> items) {
+        StringBuilder outBuilder = new StringBuilder();
         for (AppHolder item : items) {
             if (item.isSelected() == selected) {
-                packages.add(item.getAppPackageName());
+                outBuilder.append(",").append(item.getAppPackageName());
             }
         }
-        return packages;
+        return outBuilder.toString();
     }
 
 
